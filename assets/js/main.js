@@ -260,9 +260,21 @@ function playVideoModal(videoSrc) {
   const source = document.getElementById("modalVideoSource");
 
   source.src = videoSrc;
-  video.load(); // Load the new source
+  video.load();
   modal.style.display = "flex";
   video.play();
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("modalVideo");
+  const source = document.getElementById("modalVideoSource");
+
+  video.pause();
+  video.currentTime = 0;
+  source.src = ""; // Remove the video source
+  video.load();    // Ensure it's fully reset
+  modal.style.display = "none";
 }
 
 // Initialize EmailJS
