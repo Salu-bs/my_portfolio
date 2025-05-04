@@ -1378,11 +1378,13 @@ body.light-theme {
   position: relative;
   width: 260px;
   height: 260px;
-  border: 6px solid #00e5ff;
+  border: 6px solid var(--first-color);
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
   overflow: visible;
-  box-shadow: 0 0 20px #00e5ff;
+  box-shadow: 0 0 20px #517ffd;
+  /* box-shadow:var(--first-color); */
+
 }
 
 .circle img {
